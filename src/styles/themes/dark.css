@@ -1,0 +1,14 @@
+[data-theme='dark'] {
+    --color-bg: #0f172a;
+    --color-text: #e5e5e5;
+    --color-muted: #94a3b8;
+    --color-border: rgba(255, 255, 255, 0.1);
+  
+    --color-primary: #3b82f6;
+    --color-secondary: #6366f1;
+    --color-success: #187038;
+    --color-warning: #d0a420;
+    --color-danger: #a43020;
+    --color-info: #30a0b4;
+  }
+  
