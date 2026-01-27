@@ -13,10 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="bg-dark text-light">
+    <html lang="en" className="scroll-smooth" data-theme="dark">
+      <body className="bg-[var(--color-bg)] text-[var(--color-text)] ">
         <Header />
-        <main className="min-h-[calc(100vh-80px)] p-4">{children}</main>
+        <main className="min-h-[calc(100vh-128px)] p-4">{children}</main>
         <Footer />
       </body>
     </html>
