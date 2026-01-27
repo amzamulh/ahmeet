@@ -1,18 +1,17 @@
 :root {
-    /* Border Radius */
-    --radius-xs: 0.125rem;
-    --radius-sm: 0.25rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
-    --radius-xl: 1rem;
-    --radius-full: 9999px;
-  
-    /* Z-Index */
-    --z-index-base: 1;
-    --z-index-dropdown: 1000;
-    --z-index-modal: 2000;
-    --z-index-popover: 3000;
-    --z-index-tooltip: 4000;
-    --z-index-toast: 5000;
-  }
-  
+  /* Border Radius */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Z-Index */
+  --z-index-base: 1;
+  --z-index-dropdown: 1000;
+  --z-index-modal: 2000;
+  --z-index-popover: 3000;
+  --z-index-tooltip: 4000;
+  --z-index-toast: 5000;
+}

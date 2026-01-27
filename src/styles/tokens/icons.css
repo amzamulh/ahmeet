@@ -1,9 +1,8 @@
 :root {
-    --icon-size-xs: 0.875rem;
-    --icon-size-sm: 1rem;
-    --icon-size-md: 1.25rem;
-    --icon-size-base: 1.5rem;
-    --icon-size-lg: 1.75rem;
-    --icon-size-xl: 2rem;
-  }
-  
+  --icon-size-xs: 0.875rem;
+  --icon-size-sm: 1rem;
+  --icon-size-md: 1.25rem;
+  --icon-size-base: 1.5rem;
+  --icon-size-lg: 1.75rem;
+  --icon-size-xl: 2rem;
+}
