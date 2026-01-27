@@ -1,0 +1,6 @@
+@utility icon-* {
+    width: --value(--icon-size-*);
+    height: --value(--icon-size-*);
+    font-size: --value(--icon-size-*);
+  }
+  
