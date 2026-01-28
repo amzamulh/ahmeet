@@ -11,7 +11,7 @@ export type BtnSize = "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "full";
 
 type TextSize = Exclude<BtnSize, "full">;
 
-interface BtnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface BtnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: BtnVariant;
   color?: BtnColor;
   size?: TextSize;
