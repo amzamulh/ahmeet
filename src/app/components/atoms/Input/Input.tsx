@@ -88,7 +88,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           data-size={size}
           data-state={state}
           placeholder={placeholder}
-          className={`w-full py-2 px-3 rounded-sm border outline-none transition focus:ring-1 focus:ring-offset-0 ${stateClasses[state]} ${sizeClasses[size]} ${borderRadius[radius]}  ${className}`}
+          className={`w-full py-2 px-3 border outline-none transition focus:ring-1 focus:ring-offset-0 ${stateClasses[state]} ${sizeClasses[size]} ${borderRadius[radius]}  ${className}`}
           {...props}
         />
         {helperText && (
