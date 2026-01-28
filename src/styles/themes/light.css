@@ -4,11 +4,11 @@
   --color-muted: #475569;
   --color-border: #e2e8f0;
 
-  --color-heading: #e5e5e5;
+  --color-heading: #181818;
   --color-hover: #fafafa;
 
-  --color-primary: #3b82f6;
-  --color-secondary: #6366f1;
+  --color-primary: #6366f1;
+  --color-secondary: #3b82f6;
   --color-success: #30b060;
   --color-warning: #fbc02d;
   --color-danger: #cc3828;
@@ -16,4 +16,6 @@
   --color-disable: #7b7c7e;
 
   --color-sidebar: #fbfbfb;
+
+  --color-bg-input: #f8fafc;
 }

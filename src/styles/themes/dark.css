@@ -4,16 +4,18 @@
   --color-muted: #94a3b8;
   --color-border: rgba(255, 255, 255, 0.1);
 
-  --color-heading: #181818;
+  --color-heading: #e5e5e5;
   --color-hover: #252525;
 
-  --color-primary: #3b82f6;
-  --color-secondary: #6366f1;
-  --color-success: #187038;
+  --color-primary: #6366f1;
+  --color-secondary: #3b82f6;
+  --color-success: #30b060;
   --color-warning: #d0a420;
   --color-danger: #a43020;
   --color-info: #30a0b4;
   --color-disable: #bdbdbd;
 
   --color-sidebar: #0b1120;
+
+  --color-bg-input: rgba(255, 255, 255, 0.05);
 }
