@@ -3,7 +3,7 @@ export type BtnSize = "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "full";
 type TextSize = Exclude<BtnSize, "full">;
 
 export interface DropdownItemProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string;
+  children: React.ReactNode;
   size?: TextSize;
   onClick?: () => void;
 }
@@ -18,7 +18,7 @@ const textSizeClasses: Record<TextSize, string> = {
 };
 
 export function DropdownItem({
-  label,
+  children,
   size = "md",
   onClick,
 }: DropdownItemProps) {
@@ -26,9 +26,9 @@ export function DropdownItem({
     <button
       role="menuitem"
       onClick={onClick}
-      className={` flex w-full items-center px-4 py-2 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${textSizeClasses[size]}`}
+      className={` flex w-full items-center px-4 py-2 text-[var(--color-muted)] cursor-pointer rounded-sm hover:text-gray-300 duration-300 hover:bg-[var(--color-primary)] focus:bg-[var(--color-primary)] focus:text-[var(--color-text)] focus:outline-none ${textSizeClasses[size]}`}
     >
-      {label}
+      {children}
     </button>
   );
 }
