@@ -1,5 +1,5 @@
-import { Avatar } from "@/app/components/atoms/Avatar";
-import { Icon } from "@/app/components/atoms/Icon";
+import { Avatar } from "@ah/app/components/atoms/Avatar";
+import { Icon } from "@ah/app/components/atoms/Icon";
 
 export interface ParticipantItemProps {
   name: string;

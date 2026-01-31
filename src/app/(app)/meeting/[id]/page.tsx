@@ -1,8 +1,8 @@
-import { ChatPanel } from "@/app/components/organisms/chat/ChatPanel";
-import { VideoGrid } from "@/app/components/organisms/confirence_room/VideoGrid";
-import { MediaControlBar } from "@/app/components/organisms/controls/MediaControlBar";
-import { Sidebar } from "@/app/components/organisms/layouts/Sidebar";
-import { MeetingLayout } from "@/app/components/templates/MeetingLayout";
+import { ChatPanel } from "@ah/organisms/chat/ChatPanel";
+import { VideoGrid } from "@ah/organisms/confirence_room/VideoGrid";
+import { MediaControlBar } from "@ah/organisms/controls/MediaControlBar";
+import { Sidebar } from "@ah/organisms/layouts/Sidebar";
+import { MeetingLayout } from "@ah/templates/MeetingLayout";
 
 interface MeetingPageProps {
   params: { id: string };

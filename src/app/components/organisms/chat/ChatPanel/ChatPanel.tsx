@@ -1,6 +1,6 @@
-import { Button } from "@/app/components/atoms/Button";
-import { Icon } from "@/app/components/atoms/Icon";
-import { Textarea } from "@/app/components/atoms/Textarea";
+import { Button } from "@ah/app/components/atoms/Button";
+import { Icon } from "@ah/app/components/atoms/Icon";
+import { Textarea } from "@ah/app/components/atoms/Textarea";
 
 export interface ChatPanelProps {
   children: React.ReactNode;

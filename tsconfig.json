@@ -19,7 +19,13 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@ah/*": ["./src/*"],
+      "@ah/atoms/*": ["./src/app/components/atoms/*"],
+      "@ah/molecules/*": ["./src/app/components/molecules/*"],
+      "@ah/organisms/*": ["./src/app/components/organisms/*"],
+      "@ah/templates/*": ["./src/app/components/templates/*"],
+      "@ah/components/utils*": ["./src/app/components/utils/*"],
+      "@ah/styles*": ["./src/styles*"],
     }
   },
   "include": [

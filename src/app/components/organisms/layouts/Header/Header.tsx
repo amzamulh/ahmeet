@@ -1,8 +1,8 @@
 "use client";
 
-import { Avatar } from "../../../atoms/Avatar";
-import { Button } from "../../../atoms/Button";
-import { Logo } from "../../../atoms/Logo";
+import { Avatar } from "@ah/app/components/atoms/Avatar";
+import { Button } from "@ah/app/components/atoms/Button";
+import { Logo } from "@ah/app/components/atoms/Logo";
 
 export default function Header() {
   return (

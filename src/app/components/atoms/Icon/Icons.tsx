@@ -70,6 +70,9 @@ import {
   LuLink,
   LuCalendar,
   LuClock,
+  LuGlobe,
+  LuMoon,
+  LuSunDim,
 } from "react-icons/lu";
 import { AhLogo } from "../../utils/Svg";
 
@@ -136,6 +139,9 @@ export const iconMap = {
   link: LuLink,
   calendar: LuCalendar,
   clock: LuClock,
+  glob: LuGlobe,
+  sun: LuSunDim,
+  moon: LuMoon,
   "ah-logo": AhLogo,
 } as const;
 

@@ -1,4 +1,4 @@
-import { Icon } from "@/app/components/atoms/Icon";
+import { Icon } from "@ah/app/components/atoms/Icon";
 
 export interface ChatMessageProps {
   sender: string;

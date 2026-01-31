@@ -1,5 +1,5 @@
-import { Button } from "@/app/components/atoms/Button";
-import { Icon } from "@/app/components/atoms/Icon";
+import { Button } from "@ah/app/components/atoms/Button";
+import { Icon } from "@ah/app/components/atoms/Icon";
 
 export interface MediaControlBarProps {
   muted?: boolean;
