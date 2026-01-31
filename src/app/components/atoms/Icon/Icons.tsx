@@ -71,6 +71,7 @@ import {
   LuCalendar,
   LuClock,
 } from "react-icons/lu";
+import { AhLogo } from "../../utils/Svg";
 
 export const iconMap = {
   mic: LuMic,
@@ -135,6 +136,7 @@ export const iconMap = {
   link: LuLink,
   calendar: LuCalendar,
   clock: LuClock,
+  "ah-logo": AhLogo,
 } as const;
 
 export type IconName = keyof typeof iconMap;
