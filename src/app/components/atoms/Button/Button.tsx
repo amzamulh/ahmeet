@@ -29,13 +29,13 @@ const textSizes: Record<TextSize, string> = {
 };
 
 const borderRadius: Record<BtnSize, string> = {
-  xs: "rounded-[var(--redius-xs)]",
-  sm: "rounded-[var(--redius-sm)]",
-  md: "rounded-[var(--redius-base)]",
-  lg: "rounded-[var(--redius-lg)]",
-  xl: "rounded-[var(--redius-xl)]",
-  xxl: "rounded-[var(--redius-xxl)]",
-  full: "rounded-[var(--redius-xxl)]",
+  xs: "rounded-[var(--radius-xs)]",
+  sm: "rounded-[var(--radius-sm)]",
+  md: "rounded-[var(--radius-base)]",
+  lg: "rounded-[var(--radius-lg)]",
+  xl: "rounded-[var(--radius-xl)]",
+  xxl: "rounded-[var(--radius-xxl)]",
+  full: "rounded-[var(--radius-xxl)]",
 };
 
 const variantColorClasses: Record<BtnVariant, Record<BtnColor, string>> = {

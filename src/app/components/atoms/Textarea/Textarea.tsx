@@ -26,13 +26,13 @@ const sizeClasses: Record<TextSize, string> = {
 };
 
 const borderRadius: Record<Size, string> = {
-  xs: "rounded-[var(--redius-xs)]",
-  sm: "rounded-[var(--redius-sm)]",
-  md: "rounded-[var(--redius-base)]",
-  lg: "rounded-[var(--redius-lg)]",
-  xl: "rounded-[var(--redius-xl)]",
-  xxl: "rounded-[var(--redius-xxl)]",
-  full: "rounded-[var(--redius-xxl)]",
+  xs: "rounded-[var(--radius-xs)]",
+  sm: "rounded-[var(--radius-sm)]",
+  md: "rounded-[var(--radius-base)]",
+  lg: "rounded-[var(--radius-lg)]",
+  xl: "rounded-[var(--radius-xl)]",
+  xxl: "rounded-[var(--radius-xxl)]",
+  full: "rounded-[var(--radius-xxl)]",
 };
 const stateClasses: Record<State, string> = {
   default:
@@ -83,7 +83,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           data-size={size}
           data-state={state}
           placeholder={placeholder}
-          className={`w-full resize-none py-2 px-3 rounded-sm border outline-none transition focus:ring-1 focus:ring-offset-0 ${stateClasses[state]} ${sizeClasses[size]} ${borderRadius[radius]}  ${className}`}
+          className={`w-full resize-none py-2 px-3 border outline-none transition focus:ring-1 focus:ring-offset-0 ${stateClasses[state]} ${sizeClasses[size]} ${borderRadius[radius]}  ${className}`}
           {...props}
         />
         {helperText && (
