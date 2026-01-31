@@ -13,7 +13,7 @@ export interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {
   size?: LogoSize;
   variant?: LogoVariant;
   layout?: LogoLayout;
-  iconName?: "ah-log";
+  iconName?: "ah-logo";
   showBadge?: boolean;
 }
 
@@ -49,7 +49,7 @@ export const Logo = ({
   variant = "default",
   layout = "horizontal",
   showBadge = false,
-  iconName = "ah-log",
+  iconName = "ah-logo",
   src,
   alt = "",
   className = "",
