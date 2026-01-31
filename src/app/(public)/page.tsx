@@ -1,7 +1,7 @@
 "use client";
 
-import { Footer } from "./components/organisms/layouts/Footer";
-import { Header } from "./components/organisms/layouts/Header";
+import Footer from "../components/organisms/layouts/Footer/Footer";
+import { Header } from "../components/organisms/layouts/Header";
 
 export default function HomePage() {
   return (

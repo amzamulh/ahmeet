@@ -1,4 +1,4 @@
-import { SettingsLayout } from "../components/templates/SettingsLayout";
+import { SettingsLayout } from "@/app/components/templates/SettingsLayout";
 
 const SettingsPage = () => {
   return (
