@@ -1,6 +1,5 @@
-import { ParticipantItem } from "../components/organisms/confirence_room/ParticipantItem";
-import { DashboardLayout } from "../components/templates/Dashboard";
-
+import { ParticipantItem } from "@ah/organisms/confirence_room/ParticipantItem";
+import { DashboardLayout } from "@ah/templates/Dashboard/DashboardLayout";
 const DashboardPage = () => {
   return (
     <DashboardLayout sidebar={<ParticipantItem name="amzam" />}>

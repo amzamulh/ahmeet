@@ -1,4 +1,4 @@
-import "@/styles/index.css";
+import "@ah/styles/index.css";
 export const metadata = {
   title: "Ahmeet",
   description: "Enterprise-grade real-time video conferencing platform",
