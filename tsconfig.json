@@ -26,6 +26,7 @@
       "@ah/templates/*": ["./src/app/components/templates/*"],
       "@ah/components/utils*": ["./src/app/components/utils/*"],
       "@ah/styles*": ["./src/styles*"],
+      "@ah/store*": ["./src/store/*"]
     }
   },
   "include": [

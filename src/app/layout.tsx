@@ -1,3 +1,4 @@
+import { ReduxProvider } from "@ah/store/Provider";
 import "@ah/styles/index.css";
 export const metadata = {
   title: "Ahmeet",
@@ -12,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" data-theme="dark">
       <body className="bg-[var(--color-bg)] text-[var(--color-text)] ">
-        {children}
+        <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>
   );
