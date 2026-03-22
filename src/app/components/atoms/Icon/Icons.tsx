@@ -1,5 +1,4 @@
 import {
-  // Audio / Video
   LuMic,
   LuMicOff,
   LuVideo,
@@ -8,29 +7,21 @@ import {
   LuVolumeX,
   LuScreenShare,
   LuScreenShareOff,
-
-  // Call controls
   LuPhone,
   LuPhoneOff,
   LuPlay,
   LuPause,
   LuCircleStop,
   LuCircleDot,
-
-  // Collaboration
   LuUsers,
   LuUser,
   LuUserPlus,
   LuHand,
   LuMessageSquare,
   LuMessagesSquare,
-
-  // Chat
   LuSend,
   LuSmile,
   LuPaperclip,
-
-  // Navigation
   LuChevronUp,
   LuChevronDown,
   LuChevronLeft,
@@ -38,16 +29,12 @@ import {
   LuMenu,
   LuArrowLeft,
   LuArrowRight,
-
-  // Actions
   LuPlus,
   LuMinus,
   LuCheck,
   LuX,
   LuPencil,
   LuTrash,
-
-  // System
   LuSettings,
   LuSearch,
   LuFilter,
@@ -55,15 +42,11 @@ import {
   LuLogOut,
   LuLogIn,
   LuRefreshCw,
-
-  // Status / Feedback
   LuInfo,
   LuTriangleAlert,
   LuCircleCheck,
   LuCircleX,
   LuLoader,
-
-  // UI helpers
   LuEye,
   LuEyeOff,
   LuCopy,

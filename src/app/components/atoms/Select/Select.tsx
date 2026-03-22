@@ -67,7 +67,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
       id,
       ...props
     },
-    ref
+    ref,
   ) {
     const getId = id || React.useId();
 
@@ -110,5 +110,5 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         )}
       </div>
     );
-  }
+  },
 );
