@@ -1,40 +1,47 @@
 import { Button } from "@ah/app/components/atoms/Button";
+import { DropdownItem } from "@ah/app/components/atoms/DropdownItem";
 import { Icon } from "@ah/app/components/atoms/Icon";
+import { Select } from "@ah/app/components/atoms/Select";
+import { Dropdown } from "@ah/app/components/molecules/Dropdown";
+import { useMediaDevices } from "@ah/hooks/devices/useMediaDevices";
+import { useSelectedDevices } from "@ah/hooks/devices/useSelectedDevices";
 
 export interface MediaControlBarProps {
-  muted?: boolean;
-  cameraOff?: boolean;
-  onMuteToggle?: () => void;
-  onCameraToggle?: () => void;
-  onScreenShare?: () => void;
-  onLeave?: () => void;
+  isGranted: boolean;
+  isMissingMic?: boolean;
+  isMissingCamera?: boolean;
 }
 
 export const MediaControlBar = ({
-  muted,
-  cameraOff,
-  onMuteToggle,
-  onCameraToggle,
-  onScreenShare,
-  onLeave,
+  isGranted = false,
+  isMissingMic = false,
+  isMissingCamera = false,
 }: MediaControlBarProps) => {
+  const { microphones, defaultMic, cameras, defaultCamera } =
+    useMediaDevices(isGranted);
+  const { microphoneId, setMicrophone, cameraId, setCamera } =
+    useSelectedDevices();
+  const allMic = microphones.map((m) => ({ label: m.label, value: m.id }));
+  const allCamera = cameras.map((c) => ({ label: c.label, value: c.id }));
+  console.log(microphones);
   return (
     <div className="flex items-center justify-center gap-4 border-t bg-[var(--color-bg-card)] p-3">
-      <Button variant="outline" onClick={onMuteToggle}>
-        <Icon name={muted ? "mic-off" : "mic"} />
-      </Button>
+      <Select
+        options={allMic}
+        value={microphoneId ?? defaultMic?.id ?? ""}
+        onChange={(e) => setMicrophone(e.target.value)}
+        disabled={!isGranted || isMissingMic}
+      ></Select>
 
-      <Button variant="outline" onClick={onCameraToggle}>
-        <Icon name={cameraOff ? "camera-off" : "camera"} />
-      </Button>
-
-      <Button variant="outline" onClick={onScreenShare}>
-        <Icon name="screen-share" />
-      </Button>
-
-      <Button color="danger" onClick={onLeave}>
-        Leave
-      </Button>
+      <Select
+        options={allCamera}
+        value={cameraId ?? defaultCamera?.id ?? ""}
+        onChange={(e) => setCamera(e.target.value)}
+        disabled={!isGranted || isMissingCamera}
+      ></Select>
+      <Dropdown label="More">
+        <DropdownItem>one</DropdownItem>
+      </Dropdown>
     </div>
   );
 };
