@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import { Button } from "../../atoms/Button";
 export type BtnVariant = "solid" | "outline" | "dashed";
+export type dropDownPosition = "top" | "bottom" | "left" | "right";
 export type Color =
   | "primary"
   | "secondary"
@@ -12,8 +13,12 @@ export type Color =
   | "danger"
   | "disabled";
 export type Size = "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "full";
-type ListItems = {
-  label: string;
+
+const dropdownPositionClasses: Record<dropDownPosition, string> = {
+  top: "origin-bottom-right bottom-full mb-2",
+  bottom: "origin-top-right top-full mt-2",
+  left: "origin-top-right right-full mr-2",
+  right: "origin-top-left left-full ml-2",
 };
 
 type TextSize = Exclude<Size, "full">;
@@ -23,7 +28,7 @@ export interface DropdownProps {
   color?: Color;
   size?: TextSize;
   radius?: Size;
-  items: ListItems[];
+  position?: dropDownPosition;
   className?: string;
   children: React.ReactNode;
 }
@@ -33,13 +38,30 @@ export const Dropdown = ({
   variant,
   color,
   size,
-  items,
   radius,
+  position = "top",
   className = "",
   ...props
 }: DropdownProps) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
+  const [align, setAlign] = useState<boolean>(false);
+
   const ref = useRef<HTMLDivElement>(null);
+  const childRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!open || !childRef.current || !ref.current) return;
+
+    const parentRect = ref.current.getBoundingClientRect();
+    const { width } = childRef.current.getBoundingClientRect();
+
+    const spaceRight = window.innerWidth - parentRect.right;
+
+    if (spaceRight < width) {
+      setAlign(true);
+    } else {
+      setAlign(false);
+    }
+  }, [open]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -71,9 +93,11 @@ export const Dropdown = ({
       {open && (
         <div
           role="menu"
-          className={` absolute right-0 z-50 mt-2 w-48  origin-top-right bg-[var(--color-bg)] rounded-md border border-[var(--color-border)] shadow-lg focus:outline-none ${className}`}
+          className={` absolute z-50 mt-2 w-48 ${align ? "right-0" : "left-0"} ${dropdownPositionClasses[position]} bg-[var(--color-bg)] rounded-md border border-[var(--color-border)] shadow-lg focus:outline-none ${className}`}
         >
-          <div className="py-2">{props.children}</div>
+          <div ref={childRef} className="py-2">
+            {props.children}
+          </div>
         </div>
       )}
     </div>
