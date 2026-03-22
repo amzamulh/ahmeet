@@ -24,11 +24,12 @@
       "@ah/molecules/*": ["./src/app/components/molecules/*"],
       "@ah/organisms/*": ["./src/app/components/organisms/*"],
       "@ah/templates/*": ["./src/app/components/templates/*"],
-      "@ah/components/utils*": ["./src/app/components/utils/*"],
-      "@ah/styles*": ["./src/styles*"],
-      "@ah/hooks/ui*": ["./src/hooks/ui/*"],
-      "@ah/store*": ["./src/store/*"],
-      "@ah/store/ui*": ["./src/store/slice/ui*"]
+      "@ah/components/utils/*": ["./src/app/components/utils/*"],
+      "@ah/styles/*": ["./src/styles/*"],
+      "@ah/hooks/ui/*": ["./src/hooks/ui/*"],
+      "@ah/store/*": ["./src/store/*"],
+      "@ah/store/ui*": ["./src/store/slice/ui/*"],
+      "@ah/types/*": ["./src/types/*"]
     }
   },
   "include": [
